@@ -5,7 +5,9 @@
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
     "build": "webpack --config webpack.prod.config",
-    "dev": "NODE_ENV=development node ./bin/www"
+    "dev": "NODE_ENV=development node ./bin/www",
+    "lint": "echo todo: add linting step to build process",
+    "test": "echo todo: add tests"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
