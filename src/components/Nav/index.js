@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { HOME_PATH, PREVIEW_PATH } from '../Router/PATHS';
+import { HOME_PATH, PREVIEW_PATH } from '../AppRouter/PATHS';
 import { Link } from 'react-router';
 
 export default class Nav extends Component {
