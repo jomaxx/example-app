@@ -2,9 +2,13 @@
   "parser": "babel-eslint",
 
   "env": {
-  	"node": true,
+    "node": true,
     "browser": true,
-  	"es6": true
+    "es6": true
+  },
+
+  "globals": {
+    "requireCss": false
   },
 
   "ecmaFeatures": {
@@ -12,7 +16,7 @@
   },
 
   "rules":{
-  	"vars-on-top": 2,
-  	"no-undef": 2
+    "vars-on-top": 2,
+    "no-undef": 2
   }
 }
