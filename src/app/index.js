@@ -47,7 +47,7 @@ if (isDev) {
     next();
   });
 } else {
-  const webpackAssets = require('../webpack-assets');
+  const webpackAssets = require('../../webpack-assets');
 
   app.use(function (req, res, next) {
     res.locals.pathJS = function (name) {
