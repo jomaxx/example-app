@@ -1,22 +1,13 @@
 {
-  "parser": "babel-eslint",
-
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true
-  },
-
-  "globals": {
-    "requireCss": false
-  },
-
+  "extends": "airbnb",
   "ecmaFeatures": {
-    "jsx": true
+    "restParams": true
   },
-
-  "rules":{
-    "vars-on-top": 2,
-    "no-undef": 2
+  "rules": {
+    "func-names": 0,
+    "space-before-function-paren": [2, {
+      "anonymous": "always",
+      "named": "never"
+    }]
   }
 }

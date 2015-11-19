@@ -1,12 +1,12 @@
 import { UPDATE_MARKDOWN } from '../../actions/types';
 
-function markdown (state = '', action) {
+function markdown(state = '', action) {
   switch (action.type) {
-    case UPDATE_MARKDOWN:
-      state = action.markdown;
-      break;
+  case UPDATE_MARKDOWN:
+    return action.markdown;
+  default:
+    return state;
   }
-  return state;
 }
 
 export default markdown;

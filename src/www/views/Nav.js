@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class NavView extends Component {
@@ -11,9 +11,7 @@ class NavView extends Component {
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link className="navbar-brand" to="/">
-              {'</>'}
-            </Link>
+            <Link className="navbar-brand" to="/">{'</>'}</Link>
           </div>
           <ul className="nav navbar-nav navbar-left">
             <li>

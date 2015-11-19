@@ -1,6 +1,3 @@
 #!/usr/bin/env node
-require('babel-core/register')({ only: /src/ });
+require('babel-core/register');
 require('../src/server');
-if (process.env.NODE_ENV === 'development') {
-  require('../src/devServer');
-}

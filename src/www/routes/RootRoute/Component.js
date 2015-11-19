@@ -1,11 +1,11 @@
 import React from 'react';
-import NavView from '../views/Nav';
+import NavView from '../../views/Nav';
 
 if (process.env.CLIENT) {
   require('./style.less');
 }
 
-function ApplicationRoute({ children }) {
+function RootRouteComponent({ children }) {
   return (
     <div>
       <NavView/>
@@ -16,4 +16,4 @@ function ApplicationRoute({ children }) {
   );
 }
 
-export default ApplicationRoute
+export default RootRouteComponent;

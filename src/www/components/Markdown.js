@@ -2,24 +2,23 @@ import React, { Component, PropTypes } from 'react';
 import marked from 'marked';
 import classNames from 'classnames';
 
+const propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.string,
+};
+
 class Markdown extends Component {
-
-  static propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.string
-  }
-
   constructor(props) {
     super(props);
     this.state = {
-      html: marked(props.children)
+      html: marked(props.children),
     };
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.children !== nextProps.children) {
       this.setState({
-        html: marked(nextProps.children)
+        html: marked(nextProps.children),
       });
     }
   }
@@ -32,5 +31,7 @@ class Markdown extends Component {
     );
   }
 }
+
+Markdown.propTypes = propTypes;
 
 export default Markdown;
