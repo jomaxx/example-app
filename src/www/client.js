@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createAppStore } from './stores';
 import Router, { match } from 'react-router';
-import * as routes from './components/routes';
+import routes from './routes';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { createLocation } from 'history';
-import DevPanel from './components/views/DevPanel';
+import DevPanel from './views/DevPanel';
 
 const store = createAppStore();
 const history = createBrowserHistory();

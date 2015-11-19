@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { DebugPanel, DevTools, LogMonitor } from 'redux-devtools/lib/react';
 
-export default class DevPanel extends Component {
+const propTypes = {
+  store: PropTypes.object,
+};
 
-  constructor(props){
+class DevPanel extends Component {
+  constructor(props) {
     super(props);
+
     this.state = {
-      showTools: false
+      showTools: false,
     };
+
     this._handleKeyDown = this._handleKeyDown.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', this._handleKeyDown)
+    window.addEventListener('keydown', this._handleKeyDown);
   }
 
   componentWillUnmount() {
@@ -21,7 +26,7 @@ export default class DevPanel extends Component {
 
   _toggleTools() {
     this.setState({
-      showTools: !this.state.showTools
+      showTools: !this.state.showTools,
     });
   }
 
@@ -44,3 +49,7 @@ export default class DevPanel extends Component {
     );
   }
 }
+
+DevPanel.propTypes = propTypes;
+
+export default DevPanel;
