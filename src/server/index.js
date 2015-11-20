@@ -10,14 +10,6 @@ const port = parseInt(process.env.PORT, 10);
 const appPort = isDev ? port + 1 : port;
 const server = http.createServer(app);
 
-const devServer = new WebpackDevServer(webpack(webpackConfig), {
-  publicPath: '/',
-  hot: true,
-  proxy: {
-    '*': `http://localhost:${appPort}`,
-  },
-});
-
 app.set('port', port);
 
 function startServer() {
@@ -28,6 +20,14 @@ function startServer() {
 }
 
 if (isDev) {
+  const devServer = new WebpackDevServer(webpack(webpackConfig), {
+    publicPath: '/',
+    hot: true,
+    proxy: {
+      '*': `http://localhost:${appPort}`,
+    },
+  });
+
   devServer.listen(port, function (err) {
     if (err) throw err;
     startServer();
