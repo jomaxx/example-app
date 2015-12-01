@@ -6,7 +6,7 @@ import debug from '../utils/debug';
 import app from './app';
 
 const isDev = app.get('env') === 'development';
-const port = parseInt(process.env.PORT, 10);
+const port = parseInt((process.env.PORT || process.env.npm_package_config_port), 10);
 const appPort = isDev ? port + 1 : port;
 const server = http.createServer(app);
 
