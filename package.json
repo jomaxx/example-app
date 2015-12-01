@@ -2,10 +2,15 @@
   "name": "example-app",
   "version": "0.0.0",
   "private": true,
+  "config" : {
+    "port" : 3000
+  },
   "scripts": {
-    "start": "DEBUG=example-app PORT=3000 NODE_ENV=production node bin/www",
+    "start": "DEBUG=example-app NODE_ENV=production node bin/www",
+    "clean": "rm -rf www",
     "build": "NODE_ENV=production rm -rf www && webpack",
-    "dev": "DEBUG=example-app PORT=3000 NODE_ENV=development node bin/www",
+    "dev": "DEBUG=example-app NODE_ENV=development node bin/www",
+    "postinstall": "node deploy",
     "lint": "eslint .",
     "test": "echo todo: add tests"
   },

@@ -1,7 +1,7 @@
 var config = require('./common');
 var webpack = require('webpack');
 
-var port = parseInt(process.env.PORT);
+var port = parseInt(process.env.PORT || process.env.npm_package_config_port);
 var hotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
 
 Object.keys(config.entry).forEach(function (x) {
