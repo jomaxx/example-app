@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "DEBUG=example-app PORT=3000 NODE_ENV=production node bin/www",
-    "build": "NODE_ENV=production rm -rf www && webpack",
+    "build": "rm -rf www && NODE_ENV=production webpack",
     "dev": "DEBUG=example-app PORT=3000 NODE_ENV=development node bin/www",
     "lint": "eslint .",
     "test": "echo todo: add tests"
